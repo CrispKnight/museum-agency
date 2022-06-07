@@ -1,0 +1,29 @@
+.card {
+    width: 60%;
+    height: fit-content;
+    margin-top: 3%;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+.header {
+    background-color: #0B6EFD;
+    color: #fff;
+    padding: 1rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.content {
+    padding: 1rem;
+}
+
+@media (max-width: 800px) {
+    .card {
+        width: 90%;
+    }
+}

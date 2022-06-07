@@ -1,0 +1,39 @@
+.contacts {
+    width: 55%;
+    padding-right: 2%;
+}
+
+.header {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+}
+
+.header h3 {
+    margin: 0;
+}
+
+.contact {
+    font-size: 22px;
+    padding-top: 20px;
+}
+
+.contact i {
+    color: var(--accent);
+}
+
+.contact span {
+    padding-left: 1rem;
+}
+
+@media (max-width: 1300px) {
+    .contacts {
+        width: 100%;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .contact {
+        font-size: 1rem;
+    }
+}

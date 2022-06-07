@@ -1,0 +1,53 @@
+.notification {
+    position: fixed;
+    bottom: 0;
+    left: 30vw;
+    width: 40vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    color: var(--primary-light);
+    background-color: var(--shadow);
+    padding: 0 3%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    z-index: 30;
+}
+
+.notification h4 {
+    margin: 0;
+}
+
+.notification p {
+    margin: 0;
+}
+
+.success {
+    background-color: #28A745;
+}
+
+.error {
+    background-color: #DD3444;
+}
+
+.loading {
+    background-color: #037BFE;
+}
+
+@media (max-width: 1200px) {
+  .notification {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+    .notification {
+        left: 10vw;
+        width: 80vw;
+        height: fit-content;
+        text-align: center;
+    }
+}
+

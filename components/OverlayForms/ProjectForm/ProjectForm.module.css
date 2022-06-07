@@ -1,0 +1,32 @@
+.form {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex div {
+    width: 45%;
+}
+
+.controls {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.controls button {
+    margin-left: 1rem;
+}
+
+@media (max-width: 1400px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    .flex div {
+        width: 100%;
+    }
+}

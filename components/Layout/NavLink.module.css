@@ -1,0 +1,23 @@
+.btn {
+    font-size: 18px;
+    height: 100%;
+}
+
+.btn a {
+    text-decoration: none;
+    color: var(--secondary-text);
+}
+
+.btn :hover {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+}
+
+.active {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+}
+
+.btn .active {
+    color: var(--accent);
+}

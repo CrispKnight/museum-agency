@@ -1,0 +1,7 @@
+.current {
+    background-color: var(--primary-light);
+}
+
+.current, .completed {
+    padding: 30px 5% 100px;
+}

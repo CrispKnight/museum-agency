@@ -1,0 +1,73 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+:root {
+  --accent: hsl(223, 58%, 38%);
+  --accent-light: hsl(223, 58%, 50%);
+  --shadow: hsl(0, 0%, 74%);
+  --primary: hsl(0, 0%, 62%);
+  --primary-dark: hsl(0, 0%, 38%);
+  --primary-light: hsl(0, 0%, 96%);
+  --secondary-text: hsl(0, 0%, 46%);
+  --defauot-header-padding: 25px;
+  --default-card-padding: 1rem;
+  --default-border-radius: 1rem;
+  --default-grid-gap: 5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  padding: 30px 5%;
+}
+
+h3 {
+  padding: 10px 0;
+}
+
+a, i, h3, h5, label {
+  color: var(--accent);
+}
+
+.date {
+  color: var(--secondary-text);
+}
+
+textarea {
+  resize: none;
+}
+
+.carousel-control-prev {
+  width: 2%;
+  justify-content: left;
+}
+
+.carousel-control-next {
+  width: 2%;
+  justify-content: right;
+}
+
+#services {
+  padding-bottom: 0;
+}
+
+#services div:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 700px) {
+  .image-gallery-slide {
+    height: 50vh;
+  }
+  
+  .image-gallery-image {
+    object-fit: cover !important;
+  }
+}

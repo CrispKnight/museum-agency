@@ -1,0 +1,22 @@
+.content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+}
+
+.image {
+    min-width: 300px;
+    max-width: 350px;
+    justify-self: center;
+    align-self: center;
+}
+
+@media (max-width: 1000px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+}

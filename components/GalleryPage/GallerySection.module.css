@@ -1,0 +1,8 @@
+.gallery-image img {
+    height: 500px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+}
