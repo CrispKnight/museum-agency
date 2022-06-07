@@ -26,7 +26,7 @@ const handler = async (req, res) => {
                 from: { name: 'Museum Agency', address: email_address },
                 to: email_address,
                 subject: 'Музейное Агентство: авторизация',
-                html: `<a href="http://localhost:3000/projects?token=${token}">Войти на сайт</a>`,
+                html: `<a href="http://${process.env.DOMAIN}/projects?token=${token}">Войти на сайт</a>`,
             });
 
             return res.status(200).json({
