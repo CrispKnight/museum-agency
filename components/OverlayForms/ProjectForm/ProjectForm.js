@@ -8,7 +8,7 @@ import { clearOverlays, createNotification, revalidate } from '../../../store';
 import { getData, formatDateForInput } from '../../../utils/helpers';
 import classes from './ProjectForm.module.css';
 
-const ProjectForm = ({ project }) => {
+const ProjectForm = ({ project, domain, fs_port }) => {
     const dispatch = useDispatch();
     const [galleries, setGalleries] = useState([]);
     const [galleryInput, setGalleryInput] = useState(project?.gallery);
@@ -94,7 +94,7 @@ const ProjectForm = ({ project }) => {
             if (image) {
                 imageName = image.split('/');
                 imageName = imageName[imageName.length - 1];
-                image = 'http://localhost:4000/' + image;
+                image = `http://${domain}:${fs_port}/` + image;
             }
         }
 

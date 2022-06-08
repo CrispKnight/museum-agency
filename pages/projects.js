@@ -37,7 +37,9 @@ const ProjectsPage = (props) => {
 
     useEffect(() => {
         if (isLoggedIn && !changesCommited) {
-            getData('http://localhost:3000/api/projects').then((data) => {
+            getData(
+                `http://${props.domain}:${props.fs_port}/api/projects`
+            ).then((data) => {
                 setCurrentProjects(data.currentProjects);
                 setCompletedProjects(data.completedProjects);
                 dispatch(commitChanges());
@@ -66,7 +68,11 @@ const ProjectsPage = (props) => {
 
             {showProjectEditor && (
                 <OverlayWindow>
-                    <ProjectForm project={project} />
+                    <ProjectForm
+                        project={project}
+                        domain={props.domain}
+                        fs_port={props.fs_port}
+                    />
                 </OverlayWindow>
             )}
 
@@ -110,6 +116,8 @@ export const getStaticProps = async () => {
             projects: JSON.parse(
                 JSON.stringify({ currentProjects, completedProjects })
             ),
+            domain: process.env.DOMAIN,
+            fs_port: process.env.FS_PORT,
         },
         revalidate: 7200,
     };

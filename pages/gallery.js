@@ -26,7 +26,9 @@ const GalleryPage = (props) => {
 
     useEffect(() => {
         if (isLoggedIn && !changesCommited) {
-            getData('http://localhost:3000/api/galleries').then((data) => {
+            getData(
+                `http://${props.domain}:${props.fs_port}/api/galleries`
+            ).then((data) => {
                 setGalleries(data);
                 dispatch(commitChanges());
             });
@@ -52,7 +54,10 @@ const GalleryPage = (props) => {
 
             {showGalleryEditor && (
                 <OverlayWindow>
-                    <ImagesUploadForm />
+                    <ImagesUploadForm
+                        domain={props.domain}
+                        fs_port={props.fs_port}
+                    />
                 </OverlayWindow>
             )}
 
@@ -77,7 +82,11 @@ export const getStaticProps = async () => {
     const galleries = await Gallery.find().sort({ date: -1 });
 
     return {
-        props: { galleries: JSON.parse(JSON.stringify(galleries)) },
+        props: {
+            galleries: JSON.parse(JSON.stringify(galleries)),
+            domain: process.env.DOMAIN,
+            fs_port: process.env.FS_PORT,
+        },
         revalidate: 7200,
     };
 };

@@ -64,7 +64,7 @@ const ImagesUploadForm = ({ gallery }) => {
 
         let images = await imgRes.json();
         images = images.data;
-        images = images.map((image) => 'http://localhost:4000/' + image);
+        images = images.map((image) => `http://${domain}:${fs_port}/` + image);
 
         const gallery = {
             title: titleInputRef.current.value,
