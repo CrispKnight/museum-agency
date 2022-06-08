@@ -26,9 +26,7 @@ const GalleryPage = (props) => {
 
     useEffect(() => {
         if (isLoggedIn && !changesCommited) {
-            getData(
-                `http://${props.domain}:${props.fs_port}/api/galleries`
-            ).then((data) => {
+            getData(`http://${props.domain}/api/galleries`).then((data) => {
                 setGalleries(data);
                 dispatch(commitChanges());
             });

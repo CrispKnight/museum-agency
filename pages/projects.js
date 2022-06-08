@@ -37,9 +37,7 @@ const ProjectsPage = (props) => {
 
     useEffect(() => {
         if (isLoggedIn && !changesCommited) {
-            getData(
-                `http://${props.domain}:${props.fs_port}/api/projects`
-            ).then((data) => {
+            getData(`http://${props.domain}/api/projects`).then((data) => {
                 setCurrentProjects(data.currentProjects);
                 setCompletedProjects(data.completedProjects);
                 dispatch(commitChanges());
