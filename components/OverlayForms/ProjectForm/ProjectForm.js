@@ -50,27 +50,27 @@ const ProjectForm = ({ project, domain, fs_port }) => {
         let imageName = project?.imageName;
         let image = imageInputRef.current.files[0];
 
-        if (
-            image &&
-            imageName &&
-            image.name !== imageName &&
-            imageName !== 'template.jpg'
-        ) {
-            const deleteImgRes = await fetch('/api/delete-images', {
-                method: 'DELETE',
-                body: JSON.stringify({ imageNames: [imageName] }),
-                headers: {
-                    'Content-Type': 'application/json',
-                    authorization: `Bearer ${token}`,
-                },
-            });
+        // if (
+        //     image &&
+        //     imageName &&
+        //     image.name !== imageName &&
+        //     imageName !== 'template.jpg'
+        // ) {
+        //     const deleteImgRes = await fetch('/api/delete-images', {
+        //         method: 'DELETE',
+        //         body: JSON.stringify({ imageNames: [imageName] }),
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             authorization: `Bearer ${token}`,
+        //         },
+        //     });
 
-            if (deleteImgRes.status === 403)
-                return dispatch(createNotification('AUTH_ERR'));
+        //     if (deleteImgRes.status === 403)
+        //         return dispatch(createNotification('AUTH_ERR'));
 
-            if (!deleteImgRes.ok)
-                return dispatch(createNotification('IMG_RM_ERR'));
-        }
+        //     if (!deleteImgRes.ok)
+        //         return dispatch(createNotification('IMG_RM_ERR'));
+        // }
 
         if ((image && !imageName) || (image && image.name !== imageName)) {
             let fd = new FormData();
