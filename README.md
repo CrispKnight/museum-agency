@@ -16,7 +16,7 @@ The website has functionality to add, edit and remove projects and galleries, wh
 
 ![Admin interface screenshot](http://museum-agency.ru:4000/museum-agency/admin-interface.png)
 
-![Project editing screenshot](http://museum-agency.ru:4000/museum-agency/editing-project.png)
+![Project editing screenshot](http://museum-agency.ru:4000/museum-agency/edit-project.png)
 
 ![Gallery editing screenshot](http://museum-agency.ru:4000/museum-agency/add-gallery.png)
 
